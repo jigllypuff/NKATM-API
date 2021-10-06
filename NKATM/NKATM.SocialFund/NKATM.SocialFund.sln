@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKATM.SocialFund.Domain", "NKATM.SocialFund.Domain\NKATM.SocialFund.Domain.csproj", "{27DBD352-3E52-4CEC-A768-AF059D7E0E2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKATM.SocialFund.Application", "NKATM.SocialFund.Application\NKATM.SocialFund.Application.csproj", "{AA8685BD-BD77-405F-940F-F218CC7A5542}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{27DBD352-3E52-4CEC-A768-AF059D7E0E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27DBD352-3E52-4CEC-A768-AF059D7E0E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27DBD352-3E52-4CEC-A768-AF059D7E0E2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA8685BD-BD77-405F-940F-F218CC7A5542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8685BD-BD77-405F-940F-F218CC7A5542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8685BD-BD77-405F-940F-F218CC7A5542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8685BD-BD77-405F-940F-F218CC7A5542}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +40,7 @@ Global
 		{754BC6DD-A49B-4337-9B84-FC0D4D6D415C} = {65125385-BD6A-467F-8DE1-A232D0FD7A89}
 		{A86E82C1-5055-4926-958F-CC7CFC4A16B4} = {65125385-BD6A-467F-8DE1-A232D0FD7A89}
 		{27DBD352-3E52-4CEC-A768-AF059D7E0E2F} = {754BC6DD-A49B-4337-9B84-FC0D4D6D415C}
+		{AA8685BD-BD77-405F-940F-F218CC7A5542} = {754BC6DD-A49B-4337-9B84-FC0D4D6D415C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC613ADD-8CE5-44BA-BD52-D00E33DC7637}
