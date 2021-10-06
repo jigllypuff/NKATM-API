@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DBC1D9DC-3D9D-4CE0-A2F8-A35919C78265}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{65125385-BD6A-467F-8DE1-A232D0FD7A89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{7EADE4F7-CDBD-4CD2-BE65-5F418E077043}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{754BC6DD-A49B-4337-9B84-FC0D4D6D415C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A86E82C1-5055-4926-958F-CC7CFC4A16B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NKATM.SocialFund.Domain", "NKATM.SocialFund.Domain\NKATM.SocialFund.Domain.csproj", "{27DBD352-3E52-4CEC-A768-AF059D7E0E2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27DBD352-3E52-4CEC-A768-AF059D7E0E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27DBD352-3E52-4CEC-A768-AF059D7E0E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27DBD352-3E52-4CEC-A768-AF059D7E0E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27DBD352-3E52-4CEC-A768-AF059D7E0E2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7EADE4F7-CDBD-4CD2-BE65-5F418E077043} = {65125385-BD6A-467F-8DE1-A232D0FD7A89}
+		{754BC6DD-A49B-4337-9B84-FC0D4D6D415C} = {65125385-BD6A-467F-8DE1-A232D0FD7A89}
+		{A86E82C1-5055-4926-958F-CC7CFC4A16B4} = {65125385-BD6A-467F-8DE1-A232D0FD7A89}
+		{27DBD352-3E52-4CEC-A768-AF059D7E0E2F} = {754BC6DD-A49B-4337-9B84-FC0D4D6D415C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC613ADD-8CE5-44BA-BD52-D00E33DC7637}
+	EndGlobalSection
+EndGlobal
