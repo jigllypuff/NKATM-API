@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using MediatR;
+using NKATM.SocialFund.Application.Exceptions;
 using NKATM.SocialFund.Application.Features.SocialRequests.Commands;
 using NKATM.SocialFund.Application.Persistance.Contracts;
+using NKATM.SocialFund.Domain;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,6 +26,12 @@ namespace NKATM.SocialFund.Application.Features.SocialRequests.Handlers.Commands
         public async Task<Unit> Handle(DeleteSocialRequestCommand request, CancellationToken cancellationToken)
         {
             var socialRequest = await repository.GetAsync(request.Id);
+
+            if (socialRequest == null)
+            {
+                throw new NotFoundException(nameof(SocialRequest), request.Id);
+            }
+
             await repository.DeleteAsync(socialRequest);
 
             return Unit.Value;

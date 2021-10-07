@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
+using NKATM.SocialFund.Application.DTOs.SocialType.Validators;
+using NKATM.SocialFund.Application.Exceptions;
 using NKATM.SocialFund.Application.Features.SocialTypes.Commands;
 using NKATM.SocialFund.Application.Persistance.Contracts;
 using NKATM.SocialFund.Domain;
@@ -23,8 +25,16 @@ namespace NKATM.SocialFund.Application.Features.SocialTypes.Handlers.Commands
         }
         public async Task<Guid> Handle(CreateSocialTypeCommand request, CancellationToken cancellationToken)
         {
+            var validator = new CreateSocialTypeValidator();
+            var validatorResult = await validator.ValidateAsync(request.SocialTypeDto);
+
+            if (validatorResult.IsValid == false)
+                throw new ValidationException(validatorResult);
+
             var socialType = mapper.Map<SocialType>(request.SocialTypeDto);
+
             socialType = await repository.AddAsync(socialType);
+
             return socialType.Id;
         }
     }

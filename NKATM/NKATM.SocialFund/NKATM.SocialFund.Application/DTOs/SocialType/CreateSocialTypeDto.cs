@@ -1,11 +1,10 @@
-﻿using NKATM.SocialFund.Application.DTOs.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace NKATM.SocialFund.Application.DTOs.SocialType
 {
-    public class SocialTypeDto : BaseDto, ISocialTypeDto
+    public class CreateSocialTypeDto : ISocialTypeDto
     {
         public string Name { get; set; }
         public int Days { get; set; }

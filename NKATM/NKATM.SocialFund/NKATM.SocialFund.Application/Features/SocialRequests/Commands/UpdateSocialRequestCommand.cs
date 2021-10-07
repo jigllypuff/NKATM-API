@@ -9,7 +9,7 @@ namespace NKATM.SocialFund.Application.Features.SocialRequests.Commands
     public class UpdateSocialRequestCommand : IRequest<Unit>
     {
         public Guid Id { get; set; }
-        public SocialRequestDto SocialRequestDto { get; set; }
+        public UpdateSocialRequestDto SocialRequestDto { get; set; }
         public ChangeSocialRequestStatusDto ChangeSocialRequestStatusDto { get; set; }
     }
 }

@@ -8,6 +8,6 @@ namespace NKATM.SocialFund.Application.Features.SocialTypes.Commands
 {
     public class CreateSocialTypeCommand : IRequest<Guid>
     {
-        public SocialTypeDto SocialTypeDto { get; set; }
+        public CreateSocialTypeDto SocialTypeDto { get; set; }
     }
 }

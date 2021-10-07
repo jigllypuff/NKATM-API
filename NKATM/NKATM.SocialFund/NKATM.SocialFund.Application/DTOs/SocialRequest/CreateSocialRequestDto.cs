@@ -10,5 +10,6 @@ namespace NKATM.SocialFund.Application.DTOs.SocialRequest
         public Guid SocialTypeId { get; set; }
         public DateTime DateRequested { get; set; }
         public string Comment { get; set; }
+        public DateTime StartDate { get; set; }
     }
 }
