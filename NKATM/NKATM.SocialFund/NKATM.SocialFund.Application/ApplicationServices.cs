@@ -9,10 +9,12 @@ namespace NKATM.SocialFund.Application
 {
     public static class ApplicationServices
     {
-        public static void ConfigureApplicationServices(this IServiceCollection services)
+        public static IServiceCollection ConfigureApplicationServices(this IServiceCollection services)
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddMediatR(Assembly.GetExecutingAssembly());
+
+            return services;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using NKATM.SocialFund.Application.Persistance.Contracts;
+﻿using Microsoft.EntityFrameworkCore;
+using NKATM.SocialFund.Application.Persistance.Contracts;
 using NKATM.SocialFund.Domain;
 using System;
 using System.Collections.Generic;
@@ -17,9 +18,11 @@ namespace NKATM.SocialFund.Persistance.Repositories
             this.context = context;
         }
 
-        public Task<SocialResult> GetSocialResultWithDetails(Guid id)
+        public async Task<SocialResult> GetSocialResultWithDetails(Guid id)
         {
-            throw new NotImplementedException();
+            return await context.SocialResults
+                        .Include(t => t.SocialType)
+                        .FirstOrDefaultAsync(t => t.Id == id);
         }
     }
 }

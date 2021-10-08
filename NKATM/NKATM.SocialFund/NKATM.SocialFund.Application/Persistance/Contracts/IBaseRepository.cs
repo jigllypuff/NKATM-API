@@ -10,7 +10,7 @@ namespace NKATM.SocialFund.Application.Persistance.Contracts
         Task<T> GetAsync(Guid id);
         Task<List<T>> GetAllAsync();
         Task<T> AddAsync(T entity);
-        Task<T> UpdateAsync(T entity);
+        Task UpdateAsync(T entity);
         Task<T> DeleteAsync(T entity);
     }
 }
