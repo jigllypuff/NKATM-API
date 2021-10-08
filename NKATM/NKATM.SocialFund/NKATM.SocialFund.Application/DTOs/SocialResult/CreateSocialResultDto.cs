@@ -5,9 +5,9 @@ using System.Text;
 
 namespace NKATM.SocialFund.Application.DTOs.SocialResult
 {
-    public class CreateSocialResultDto
+    public class CreateSocialResultDto : ISocialResultDto
     {
-        public int NumberOfDays { get; set; }
+        public int Days { get; set; }
         public Guid SocialTypeId { get; set; }
     }
 }

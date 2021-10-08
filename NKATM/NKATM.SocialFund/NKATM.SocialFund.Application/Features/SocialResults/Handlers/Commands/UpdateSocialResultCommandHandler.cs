@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
+using NKATM.SocialFund.Application.DTOs.SocialResult.Validators;
+using NKATM.SocialFund.Application.Exceptions;
 using NKATM.SocialFund.Application.Features.SocialResults.Commands;
 using NKATM.SocialFund.Application.Persistance.Contracts;
 using System;
@@ -22,6 +24,12 @@ namespace NKATM.SocialFund.Application.Features.SocialResults.Handlers.Commands
         }
         public async Task<Unit> Handle(UpdateSocialResultCommand request, CancellationToken cancellationToken)
         {
+            var validator = new UpdateSocialResultValidator();
+            var validatorResult = await validator.ValidateAsync(request.SocialResultDto);
+
+            if (validatorResult.IsValid == false)
+                throw new ValidationException(validatorResult);
+
             var socialResult = await repository.GetAsync(request.SocialResultDto.Id);
 
             mapper.Map(request.SocialResultDto, socialResult);

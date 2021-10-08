@@ -5,9 +5,9 @@ using System.Text;
 
 namespace NKATM.SocialFund.Application.DTOs.SocialResult.Validators
 {
-    public class CreateSocialResultValidator : AbstractValidator<CreateSocialResultDto>
+    public class UpdateSocialResultValidator : AbstractValidator<UpdateSocialResultDto>
     {
-        public CreateSocialResultValidator()
+        public UpdateSocialResultValidator()
         {
             Include(new ISocialResultValidator());
         }

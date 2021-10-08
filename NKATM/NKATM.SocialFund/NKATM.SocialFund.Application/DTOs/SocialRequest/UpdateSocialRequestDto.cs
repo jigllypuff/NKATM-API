@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NKATM.SocialFund.Application.DTOs.SocialRequest
 {
-    public class UpdateSocialRequestDto
+    public class UpdateSocialRequestDto : ISocialRequestDto
     {
         public Guid SocialTypeId { get; set; }
         public bool Cancelled { get; set; }
