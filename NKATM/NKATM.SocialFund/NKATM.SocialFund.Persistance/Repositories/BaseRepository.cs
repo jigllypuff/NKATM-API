@@ -41,11 +41,10 @@ namespace NKATM.SocialFund.Persistance.Repositories
             return await context.Set<T>().FindAsync(id);
         }
 
-        public async Task<T> UpdateAsync(T entity)
+        public async Task UpdateAsync(T entity)
         {
             context.Entry(entity).State = EntityState.Modified;
             await context.SaveChangesAsync();
-            return entity;
         }
     }
 }

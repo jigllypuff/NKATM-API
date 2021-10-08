@@ -13,7 +13,7 @@ namespace NKATM.SocialFund.Persistance
 {
     public static class PersistanceServices
     {
-        public static IServiceCollection ConfigureServices(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection ConfigurePersistanceServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<SocialFundDbContext>(options => 
                 options.UseSqlServer(configuration.GetConnectionString("ConnectionString")));
